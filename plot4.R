@@ -2,6 +2,7 @@
 source('load_data.R')
 
 # set plot parameters (2x2 grid)
+png(filename='plot4.png')
 par(mfrow = c(2, 2))
 
 # plot 1 / 4
@@ -18,3 +19,4 @@ legend('topright', legend=c(num_cols[5:7]), col=c('black', 'red', 'blue'), lty=1
 
 # plot 4 / 4
 with(energy, plot(datetime, Global_reactive_power, type='l'))
+dev.off()
